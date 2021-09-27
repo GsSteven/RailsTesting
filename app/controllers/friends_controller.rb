@@ -15,7 +15,6 @@ class FriendsController < ApplicationController
 
   # GET /friends/new
   def new
-    #@friend = Friend.new
     @friend = current_user.friends.build
   end
 
@@ -25,7 +24,6 @@ class FriendsController < ApplicationController
 
   # POST /friends or /friends.json
   def create
-    #@friend = Friend.new(friend_params)
     @friend = current_user.friends.build(friend_params)
 
     respond_to do |format|
